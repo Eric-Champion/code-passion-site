@@ -1,0 +1,299 @@
+/* Fluidité du scroll (à mettre dans index.css si pas déjà fait) */
+html {
+    scroll-behavior: smooth;
+}
+
+/*****************************************************/
+/*               COULEURS DE BASE                    */
+/*****************************************************/
+.bg-gris-passion {
+  background-color: #525252; /* Ton Gris */
+}
+.bg-bleu-clair {
+  background-color: #BFE4FF; /* Ton Gris */
+}
+.bg-bleu-fonce {
+  background-color: #80CAFF; /* Ton Gris */
+}
+.bg-bleu-plus-fonce {
+  background-color: #068ae9; /* Ton Gris */
+}
+.bg-bleu-max-fonce {
+  background-color: #004085; /* Ton Gris */
+}
+.text-bleu-clair {
+  color: #BFE4FF; /* Ton Bleu Clair */
+}
+.text-bleu-fonce {
+  color: #80CAFF; /* Ton Bleu Foncé */
+}
+.text-bleu-plus-fonce {
+  color: #068ae9; /* Ton Bleu Foncé */
+}
+.text-bleu-max-fonce {
+  color: #004085; /* Ton Bleu Foncé */
+}
+.text-gris-passion {
+  color: #525252; /* Ton Bleu Clair */
+}
+.border-bleu-clair {
+    border-color: #BFE4FF !important; /* Ton bleu clair fétiche */
+}
+
+/*****************************************************/
+/*               NAVIGATION                          */
+/*****************************************************/
+.bg-white.sticky-top {
+  z-index: 9999 !important; /* On s'assure qu'elle survole tout */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important; /* Une ombre pour bien marquer la séparation */
+}
+
+/* Optionnel : Si ton gris "frotte" visuellement trop fort, 
+   on peut ajouter un léger flou derrière la barre */
+.navbar {
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.95) !important; /* Blanc légèrement translucide */
+}
+
+/* 1. Taille par défaut (Mobile : S26, A16, etc.) */
+.nav-logo-responsive {
+  height: 45px;      /* Hauteur compacte pour tenir à côté du hamburger */
+  width: auto;       /* Garde les proportions */
+  transition: all 0.3s ease; /* Petit effet fluide si on redimensionne */
+}
+
+/* 2. Taille pour PC (Ecrans larges > 992px) */
+@media (min-width: 992px) {
+  .nav-logo-responsive {
+    height: 80px;    /* On retrouve ta hauteur de 80px que tu aimais sur PC */
+    /* Tu peux même monter à 90px ou 100px ici si tu veux qu'il soit plus grand */
+  }
+}
+
+/* Boutons navigation */
+.btn-passion-nav {
+  color: #525252 !important;            /* Texte Gris pour le contraste */
+  border: none !important;
+  font-weight: 600;
+  border-radius: 8px !important;
+  transition: all 0.3s ease;            /* Animation douce du changement de couleur */
+}
+.btn-passion-nav:hover {
+  background-color: #BFE4FF !important; /* Passe au Bleu Clair */
+  color: #525252 !important;
+  border-radius: 8px !important;
+  transform: translateY(-2px);          /* Petit effet de soulèvement pro */
+}
+.btn-passion-nav:active, .btn-passion-nav.active {
+  background-color: #068ae9 !important; /* Devient Gris quand on clique/sélectionne */
+  color: #FFF !important;            /* Texte Bleu Clair */
+}
+
+/*****************************************************/
+/*               BOUTONS                             */
+/*****************************************************/
+/* Boutons Standards */
+.btn-primary {
+  background-color: #BFE4FF !important; /* Ton bleu foncé */
+  border-color: #BFE4FF !important;
+  border-radius: 8px !important;
+  color: #525252;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+.btn-primary:hover {
+  background-color: #80CAFF !important; /* Un peu plus sombre au survol */
+  border-color: #80CAFF !important; /* Un peu plus sombre au survol */
+  transform: translateY(-2px); /* Petit effet de levier */
+  box-shadow: 0 4px 15px rgba(0, 74, 153, 0.3) !important;
+}
+/* Boutons Standards outline */
+.btn-outline-light {
+  border-width: 2px !important;
+  border-radius: 8px !important;
+  padding: 10px 25px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+.btn-outline-light:hover {
+  background-color: white !important;
+  color: #525252 !important; /* Ton gris passion */
+  transform: translateY(-2px);
+}
+
+/* Bouton PLEIN (Primaire) */
+.btn-bleu-logo {
+    background-color: #80CAFF !important;
+    color: #172532 !important; /* Texte sombre pour le contraste */
+    border: 2px solid #80CAFF !important;
+    transition: all 0.3s ease;
+}
+
+.btn-bleu-logo:hover {
+    background-color: #BFE4FF !important; /* Devient plus clair au survol */
+    border-color: #BFE4FF !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(128, 202, 255, 0.3);
+}
+
+/* Bouton OUTLINE (Secondaire) */
+.btn-outline-bleu-logo {
+    color: #80CAFF !important;
+    border: 2px solid #80CAFF !important;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-bleu-logo:hover {
+    background-color: rgba(128, 202, 255, 0.05) !important;
+    color: #BFE4FF !important;
+    border-color: #BFE4FF !important;
+    transform: translateY(-3px);
+}
+
+/*****************************************************/
+/*                  SCROLL                           */
+/*****************************************************/
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+}
+
+.btn-scroll {
+  width: 45px;
+  height: 45px;
+  background-color: #80CAFF; /* Ton Bleu Logo */
+  color: #172532; /* Gris Passion pour le contraste */
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.btn-scroll:hover {
+  background-color: #BFE4FF; /* Bleu Clair au survol */
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(128, 202, 255, 0.4);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/*****************************************************/
+/*                  REALISATIONS                     */
+/*****************************************************/
+.hover-shadow {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-shadow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+}
+
+.transition {
+  transition: all 0.3s ease-in-out;
+}
+
+/*****************************************************/
+/*                  EXPERTISES                       */
+/*****************************************************/
+.transition-hover {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); /* Transition plus fluide */
+}
+
+.transition-hover:hover {
+    transform: translateY(-8px); 
+    background-color: rgba(128, 202, 255, 0.05) !important; 
+    
+    /* On remplace la ligne qui posait problème par celle-ci : */
+    border-color: rgba(128, 202, 255, 0.8) !important; 
+    
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 
+                0 0 15px rgba(128, 202, 255, 0.15);
+}
+
+/* Utilité pour l'espacement des lettres (Tracking) */
+.ls-wide {
+    letter-spacing: 1.5px;
+}
+
+/* Ajustement de l'opacité Bootstrap si nécessaire */
+.border-opacity-25 {
+    border-color: rgba(191, 228, 255, 0.25) !important;
+}
+
+.bg-opacity-10 {
+    background-color: rgba(191, 228, 255, 0.1) !important;
+}
+
+.bg-gradient-expertises {
+  /* Étape 1 : On démarre au Gris Passion pur pour que la jonction soit INVISIBLE */
+  /* Étape 2 : On glisse vers un gris-bleuté intermédiaire */
+  /* Étape 3 : On finit sur ton bleu logo, mais très sombre/profond pour le fond */
+  
+  background: linear-gradient(
+    180deg, 
+    #525252 0%,    /* Gris Passion (Jonction parfaite) */
+    #455a6b 50%,   /* Transition vers un gris bleuté */
+    #2a3e4d 100%   /* Un bleu-gris profond et pro pour le bas */
+  ) !important;
+
+  /* On oublie la bordure en haut, on veut que ça coule tout seul */
+  border-top: none !important;
+}
+
+/*****************************************************/
+/*               CONTACT                             */
+/*****************************************************/
+/* Bouton désactivé (Clair) */
+.btn-contact-inactive {
+    background-color: #BFE4FF !important; /* Ton bleu très clair */
+    border-color: #BFE4FF !important;
+    color: #525252 !important;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Bouton activé (Bleu Logo / Foncé) */
+.btn-contact-active {
+    background-color: #068ae9 !important; /* Ton bleu logo */
+    border-color: #068ae9 !important;
+    color: white !important;
+    transition: all 0.3s ease;
+}
+
+.btn-contact-active:hover {
+    background-color: #004085 !important; /* Encore plus foncé au survol */
+}
+
+/*****************************************************/
+/*               FLECHE ASCENSEUR                    */
+/*****************************************************/
+.arrow-bg-gray {
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+.arrow-bg-gray:hover {
+  color: #BFE4FF !important; /* On rappelle ton bleu ciel de stats */
+  transform: translateY(-3px);
+}
+.arrow-bg-blue {
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+.arrow-bg-blue:hover {
+  color: #004a99 !important; /* On rappelle ton bleu ciel de stats */
+  transform: translateY(-3px);
+}
+
