@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { expertisesData } from '../data/expertisesData';
-import ScrollReveal from "./ScrollReveal_4";
+import ScrollReveal from "./ScrollReveal";
 
 const Expertises = () => {
   return (
